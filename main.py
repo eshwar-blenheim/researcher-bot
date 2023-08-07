@@ -56,7 +56,7 @@ def main():
         # Search for titles in the domain column
         titles = search_titles(analysis_result)
         if titles.empty:
-            st.write("No matching titles found.")
+            st.write("No matching Research papers found.")
         else:
             st.subheader(
                 "As per your request, I am pleased to submit the following research papers for your consideration:")
