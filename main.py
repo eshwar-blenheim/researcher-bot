@@ -22,13 +22,15 @@ def main():
     openai.api_key = api_key
 
     # User input
-    st.write("How may I help you?",height=100)
+    st.write("How may I help you?")
     user_input = st.text_input("Please type here", "")
     sys_prp = '''
     You have been given the following user_input,
     Analyze the text and find whether the text is about the following domains: 
     Health or Artificial Intelligence or Machine Learning or Mathematics.
     Return only the Domain Name
+    If the Domain Name is not in the above topics please return the following text:
+    "Sorry I dont have research papers on this topic. I will nake them available soon."
     '''
     
     if user_input and api_key:
