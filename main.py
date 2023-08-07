@@ -30,7 +30,7 @@ def main():
     Health or Artificial Intelligence or Machine Learning or Mathematics.
     Return only the Domain Name
     If the Domain Name is not in the above topics please return the following text:
-    "Sorry I dont have research papers on this topic. I will nake them available soon."
+    "Sorry I dont have research papers on this topic. I will make them available soon."
     '''
     
     if user_input and api_key:
@@ -57,7 +57,7 @@ def main():
         if titles:
             st.subheader("As per your request, I am pleased to submit the following research papers for your consideration:")
             for title in titles:
-                st.write(title)
+                st.table(titles.to_html())
         else:
             st.write("No matching titles found.")
 
