@@ -22,8 +22,8 @@ def main():
     openai.api_key = api_key
 
     # User input
-    st.write("How may I help you?")
-    user_input = st.text_input("Please choose your Domain", "")
+    st.write("How may I help you?",height=100)
+    user_input = st.text_input("Please type here", "")
     sys_prp = '''
     You have been given the following user_input,
     Analyze the text and find whether the text is about the following domains: 
