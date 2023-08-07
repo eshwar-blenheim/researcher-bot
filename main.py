@@ -55,7 +55,7 @@ def main():
         titles = search_titles(analysis_result)
         
         if titles:
-            st.subheader("Matching Titles:")
+            st.subheader("As per your request, I am pleased to submit the following research papers for your consideration:")
             for title in titles:
                 st.write(title)
         else:
