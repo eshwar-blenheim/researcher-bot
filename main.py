@@ -14,7 +14,7 @@ def search_titles(topic):
 
 # Main function to run the chatbot
 def main():
-    st.title("Research Paper Chatbot")
+    st.title("Researcher Chatbot")
 
     # OpenAI API key input
     st.write("Enter your OpenAI API key:")
