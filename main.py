@@ -10,7 +10,7 @@ df = pd.read_csv('Research_paper.csv')
 def search_titles(topic):
     topic = topic.lower()
     matches = df[df['Domain'].str.lower().str.contains(topic)]
-    return matches['Title'].tolist()
+    return matches[['Title', 'Abstract']]
 
 # Main function to run the chatbot
 def main():
@@ -44,7 +44,7 @@ def main():
             model="gpt-3.5-turbo",
             messages=conversation,
             temperature=0,
-            max_tokens=150,
+            max_tokens=70,
         )
         analysis_result = response['choices'][0]['message']['content']
         
