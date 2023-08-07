@@ -53,13 +53,11 @@ def main():
         
         # Search for titles in the domain column
         titles = search_titles(analysis_result)
-        
-        if titles:
-            st.subheader("As per your request, I am pleased to submit the following research papers for your consideration:")
-            for title in titles:
-                st.table(titles.to_html())
-        else:
+        if titles.empty():
             st.write("No matching titles found.")
+        else:
+            st.subheader("As per your request, I am pleased to submit the following research papers for your consideration:")
+            st.table(titles.to_html())
 
 if __name__ == "__main__":
     main()
