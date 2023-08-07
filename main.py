@@ -17,11 +17,11 @@ def search_titles(topic):
 # Main function to run the chatbot
 def main():
     st.title("Researcher Chatbot")
-
-    # OpenAI API key input
-    st.write("Enter your OpenAI API key:")
-    api_key = st.text_input("API Key:")
+    api_key = st.text_input("Enter your OpenAI API key:", type="password")
     openai.api_key = api_key
+
+    # Use Streamlit's Markdown to visually hide the API key
+    st.markdown(f"Your API key: {'•' * len(api_key)}")
 
     # User input
     st.write("How may I help you?")
