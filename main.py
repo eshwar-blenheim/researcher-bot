@@ -11,14 +11,14 @@ df = pd.read_csv('Research_paper.csv')
 def search_titles(topic):
     topic = topic.lower()
     matches = df[df['Domain'].str.lower().str.contains(topic)]
-    return matches[['Title', 'Abstract']]
+    return matches[['Title', 'Abstract','Link']]
 
 
 # Main function to run the chatbot
 def main():
     st.title("Researcher Chatbot")
-    api_key = st.text_input("Enter your OpenAI API key:", type="password")
-    openai.api_key = api_key
+    
+    openai.api_key = "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"
 
     # Use Streamlit's Markdown to visually hide the API key
     st.markdown(f"Your API key: {'•' * len(api_key)}")
@@ -56,7 +56,7 @@ def main():
         # Search for titles in the domain column
         titles = search_titles(analysis_result)
         if titles.empty:
-            st.write("No matching Research papers found.")
+            st.write("No Research papers found.")
         else:
             st.subheader(
                 "As per your request, I am pleased to submit the following research papers for your consideration:")
