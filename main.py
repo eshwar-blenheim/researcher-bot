@@ -18,7 +18,7 @@ def search_titles(topic):
 def main():
     st.title("Researcher Chatbot")
     
-    openai.api_key = "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"
+    openai.api_key = ""
 
     
 
