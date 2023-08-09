@@ -20,8 +20,7 @@ def main():
     
     openai.api_key = "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"
 
-    # Use Streamlit's Markdown to visually hide the API key
-    st.markdown(f"Your API key: {'•' * len(api_key)}")
+    
 
     # User input
     st.write("How may I help you?")
